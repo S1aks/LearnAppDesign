@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container_card"
+    android:layout_width="@dimen/card_event_height_big"
+    android:layout_height="@dimen/card_event_height_big"
+    android:layout_marginHorizontal="@dimen/card_margin"
+    app:cardCornerRadius="@dimen/card_corner_radius">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/gray"
+        android:padding="@dimen/card_homework_padding">
+
+        <ImageView
+            android:id="@+id/event_icon"
+            android:layout_width="@dimen/event_icon_size"
+            android:layout_height="@dimen/event_icon_size"
+            android:contentDescription="@string/descEventIcon"
+            android:src="@drawable/shape_event_icon_back"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/event_icon_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/event_icon_text_size"
+            app:layout_constraintBottom_toBottomOf="@id/event_icon"
+            app:layout_constraintEnd_toEndOf="@id/event_icon"
+            app:layout_constraintStart_toStartOf="@id/event_icon"
+            app:layout_constraintTop_toTopOf="@id/event_icon"
+            tools:text="🏹" />
+
+        <TextView
+            android:id="@+id/event_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/event_name_margin_top"
+            android:textSize="@dimen/event_name_text_size"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/event_icon"
+            tools:text="History" />
+
+        <TextView
+            android:id="@+id/event_time_left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/event_name_margin_top"
+            android:textColor="@color/text_color_secondary"
+            android:textSize="@dimen/event_info_text_size"
+            app:layout_constraintBottom_toBottomOf="@id/event_icon"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:text="⏱ 2 day left" />
+
+        <TextView
+            android:id="@+id/event_description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/event_description_margin_top_big"
+            android:textSize="@dimen/event_homework_text_size"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/event_icon"
+            tools:text="Read scenes 1.1-1.12 of The Master and Margarita" />
+
+        <TextView
+            android:id="@+id/event_user1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/event_user_margin_top"
+            android:background="@drawable/shape_oval_users_yellow"
+            android:gravity="center"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:text="🧑" />
+
+        <TextView
+            android:id="@+id/event_user2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/event_user_next_margin_start"
+            android:background="@drawable/shape_oval_users_blue"
+            android:gravity="center"
+            app:layout_constraintBottom_toBottomOf="@id/event_user1"
+            app:layout_constraintStart_toEndOf="@id/event_user1"
+            tools:text="👩" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

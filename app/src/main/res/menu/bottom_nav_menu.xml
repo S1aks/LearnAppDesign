@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/navigation_home"
+        android:icon="@drawable/ic_4_dots_24p"
+        android:title="@string/title_home"
+        app:cnb_iconColor="@color/green"/>
+
+    <item
+        android:id="@+id/navigation_classes"
+        android:icon="@drawable/ic_baseline_pending_actions_24"
+        android:title="@string/title_classes"
+        app:cnb_iconColor="@color/green" />
+
+    <item
+        android:id="@+id/navigation_homeworks"
+        android:icon="@drawable/ic_baseline_list_alt_24"
+        android:title="@string/title_homeworks"
+        app:cnb_iconColor="@color/green" />
+
+    <item
+        android:id="@+id/navigation_favorites"
+        android:icon="@drawable/ic_baseline_star_border_24"
+        android:title="@string/title_favorites"
+        app:cnb_iconColor="@color/green" />
+</menu>

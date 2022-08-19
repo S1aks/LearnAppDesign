@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context=".ui.classes.ClassesFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/container_margin"
+        android:paddingTop="@dimen/container_top_padding">
+
+        <TextView
+            android:id="@+id/text_classes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/top_bar_text_margin"
+            android:text="@string/top_bar_classes_text"
+            android:textAlignment="center"
+            android:textSize="@dimen/top_bar_text_size"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/classes_date_text"
+            android:textColor="@color/text_color_secondary"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/text_classes" />
+
+        <ImageView
+            android:id="@+id/search"
+            android:layout_width="@dimen/top_bar_icon_size"
+            android:layout_height="@dimen/top_bar_icon_size"
+            android:layout_marginEnd="@dimen/top_bar_icon_margin_end"
+            android:contentDescription="@string/desc_search"
+            android:src="@drawable/ic_baseline_search_24"
+            app:layout_constraintBottom_toBottomOf="@id/text_classes"
+            app:layout_constraintEnd_toStartOf="@id/list"
+            app:layout_constraintTop_toTopOf="@id/text_classes" />
+
+        <ImageView
+            android:id="@+id/list"
+            android:layout_width="@dimen/top_bar_icon_size"
+            android:layout_height="@dimen/top_bar_icon_size"
+            android:layout_marginEnd="@dimen/top_bar_icon_margin_end"
+            android:contentDescription="@string/desc_settings"
+            android:src="@drawable/ic_baseline_format_list_bulleted_24"
+            app:layout_constraintBottom_toBottomOf="@id/text_classes"
+            app:layout_constraintEnd_toStartOf="@id/blocks"
+            app:layout_constraintTop_toTopOf="@id/text_classes" />
+
+        <ImageView
+            android:id="@+id/blocks"
+            android:layout_width="@dimen/top_bar_icon_size"
+            android:layout_height="@dimen/top_bar_icon_size"
+            android:layout_marginEnd="@dimen/top_bar_icon_margin_end"
+            android:contentDescription="@string/desc_settings"
+            android:src="@drawable/ic_baseline_grid_view_24"
+            app:layout_constraintBottom_toBottomOf="@id/text_classes"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/text_classes" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/classes_recycler"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="@dimen/classes_recycler_margin_top"
+            android:orientation="vertical"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/date"
+            tools:listitem="@layout/wrap_classitem_small" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>

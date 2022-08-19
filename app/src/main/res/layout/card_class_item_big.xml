@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container_card"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/card_event_height_big"
+    android:layout_margin="@dimen/card_margin"
+    app:cardCornerRadius="@dimen/card_corner_radius">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/shape_gradient"
+        android:padding="@dimen/card_event_padding">
+
+        <ImageView
+            android:id="@+id/event_icon"
+            android:layout_width="@dimen/event_icon_size"
+            android:layout_height="@dimen/event_icon_size"
+            android:contentDescription="@string/descEventIcon"
+            android:src="@drawable/shape_event_icon_back2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/event_icon_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/event_icon_text_size"
+            app:layout_constraintBottom_toBottomOf="@id/event_icon"
+            app:layout_constraintEnd_toEndOf="@id/event_icon"
+            app:layout_constraintStart_toStartOf="@id/event_icon"
+            app:layout_constraintTop_toTopOf="@id/event_icon"
+            tools:text="🏹" />
+
+        <TextView
+            android:id="@+id/event_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/event_name_margin_start"
+            android:layout_marginTop="@dimen/event_name_margin_top"
+            android:textSize="@dimen/event_name_text_size"
+            app:layout_constraintStart_toEndOf="@id/event_icon"
+            app:layout_constraintTop_toTopOf="@id/event_icon"
+            tools:text="Physical Education" />
+
+        <TextView
+            android:id="@+id/event_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/event_name_margin_start"
+            android:layout_marginBottom="@dimen/event_name_margin_top"
+            android:textColor="@color/white"
+            android:textSize="@dimen/event_info_text_size"
+            app:layout_constraintBottom_toBottomOf="@id/event_icon"
+            app:layout_constraintStart_toEndOf="@id/event_icon"
+            tools:text="Mrs Barros" />
+
+        <TextView
+            android:id="@+id/event_description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/event_description_margin_top_big"
+            android:textSize="@dimen/event_description_text_size"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/event_icon"
+            tools:text="Intensive preparation for The Junior World Championship in Los Angeles" />
+
+        <TextView
+            android:id="@+id/event_user1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/event_user_margin_top"
+            android:background="@drawable/shape_oval_users_green2"
+            android:gravity="center"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/event_description"
+            tools:text="⛹️" />
+
+        <TextView
+            android:id="@+id/event_user2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/event_user_next_margin_start"
+            android:background="@drawable/shape_oval_users_green2"
+            android:gravity="center"
+            app:layout_constraintBottom_toBottomOf="@id/event_user1"
+            app:layout_constraintStart_toEndOf="@id/event_user1"
+            tools:text="⛹️" />
+
+        <TextView
+            android:id="@+id/event_user3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/event_user_next_margin_start"
+            android:background="@drawable/shape_oval_users_green2"
+            android:gravity="center"
+            app:layout_constraintBottom_toBottomOf="@id/event_user1"
+            app:layout_constraintStart_toEndOf="@id/event_user2"
+            tools:text="⛹️" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/open_in_block"
+        android:layout_width="50dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="end"
+        android:visibility="gone"
+        android:background="@color/open_in_block">
+
+        <TextView
+            android:id="@+id/open_in_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:rotation="90"
+            android:text="@string/open_in_block_text"
+            app:layout_constraintBottom_toTopOf="@id/open_in_image"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_chainStyle="packed" />
+
+        <ImageView
+            android:id="@+id/open_in_image"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="3dp"
+            android:contentDescription="@string/desc_open_in_image"
+            android:rotation="90"
+            android:src="@drawable/ic_camera_48p"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/open_in_text" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>
